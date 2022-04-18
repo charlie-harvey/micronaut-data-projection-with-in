@@ -52,7 +52,7 @@ interface PersonRepository : CoroutineCrudRepository<Person, Int>, CoroutineJpaS
 
     suspend fun findFirstNameAndLastNameByIdAndEmail(id: Int, email: String): FirstNameAndLastName?
 
-    suspend fun findFirstNameAndLastNameByIdAndEmailIn(id: Int, email: Collection<String>): Flow<FirstNameAndLastName>
-
     suspend fun findIdAndFirstNameByLastName(lastName: String): IdAndFirstName?
+
+    suspend fun findFirstNameAndLastNameByIdAndEmailIn(id: Int, email: Collection<String>): Flow<FirstNameAndLastName>
 }
