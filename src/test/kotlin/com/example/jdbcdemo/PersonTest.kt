@@ -3,6 +3,7 @@ package com.example.jdbcdemo
 import io.kotest.core.spec.style.AnnotationSpec
 import io.kotest.matchers.shouldBe
 import io.micronaut.test.extensions.kotest.annotation.MicronautTest
+import kotlinx.coroutines.flow.toList
 import kotlinx.coroutines.runBlocking
 
 @MicronautTest(environments = ["test"], transactional = false, startApplication = false)
